@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.bak
+*.bak-*
+*.backup-*
+.env
+.env.*
+node_modules/
+outputs/
+work/
+.DS_Store
+Thumbs.db
