@@ -1,5 +1,7 @@
 # zotero-literature-import v2 · 文献全文获取与 Zotero Connector MCP
 
+配套浏览器插件可从 [MCP Releases](https://github.com/belvme/zotero-connector-mcp/releases/latest) 下载；[安装说明](https://github.com/belvme/zotero-connector-mcp#使用预构建插件)包含本地自动配对步骤，无需自行构建上游 Connector。
+
 让 AI 助手通过浏览器中的 Zotero Connector 保存论文，并检查全文是否真正进入文库。
 
 面向知网、EBSCO 与其他 Zotero 支持的学术网站。项目包含一个可复用的 **文献导入 skill** 和一个 **Connector MCP 桥接服务**：skill 负责检索、核对与整理流程，MCP 负责调用真实插件并检查本机 PDF。

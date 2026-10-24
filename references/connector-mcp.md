@@ -1,5 +1,7 @@
 # 内置浏览器 Zotero Connector MCP
 
+公开安装包见 [独立 MCP Releases](https://github.com/belvme/zotero-connector-mcp/releases/latest)。插件包不含本机配对信息；解压到匹配 MCP 源码的 `connector-ready` 后，按该仓库说明运行 `prepare.py provision --output connector-ready` 生成自己的配置。无需手填令牌，不分享配对后的目录。
+
 用于网页抓取入库、缺 PDF 时通过浏览器下载，以及桥接连接诊断。先发现当前可用工具；下面是用户桥接版 v2 的工具名，其他环境以实际能力为准。MCP 不可用不等于 Zotero 未运行，也不要擅自重装扩展或重建服务。
 
 ## 正常操作
