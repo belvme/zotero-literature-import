@@ -20,9 +20,9 @@
 | 组件 | 用途 | 入口 |
 | --- | --- | --- |
 | `zotero-literature-import` skill | 检索、下载、去重、补附件和整理时的执行规则 | [SKILL.md](SKILL.md) |
-| Connector MCP | 活动页识别、插件保存、PDF 核验与本机授权管理 | [安装与工具说明](mcp/README.md) |
+| Connector MCP | 活动页识别、插件保存、PDF 核验与本机授权管理 | [独立仓库](https://github.com/belvme/zotero-connector-mcp) |
 
-skill 可以独立使用。MCP 需要构建并加载本项目的桥接版 Connector，不能直接操控未经修改的官方扩展。
+skill 可以独立使用。MCP 已拆分到独立仓库，需要构建并加载桥接版 Connector，不能直接操控未经修改的官方扩展。
 
 ## 使用示例
 
@@ -36,7 +36,7 @@ skill 可以独立使用。MCP 需要构建并加载本项目的桥接版 Connec
 把当前论文用 Zotero 插件保存，等待 PDF 下载并告诉我是否已核验。
 ```
 
-安装 skill：把 `skills/zotero-literature-import` 文件夹复制到所用助手支持的技能目录，例如 Codex 的 `~/.codex/skills/`。随后按 [MCP 安装说明](mcp/README.md)接通浏览器。
+安装 skill：把 `skills/zotero-literature-import` 文件夹复制到所用助手支持的技能目录，例如 Codex 的 `~/.codex/skills/`。随后按 [MCP 安装说明](https://github.com/belvme/zotero-connector-mcp#安装)接通浏览器。
 
 ## 适用边界
 
@@ -50,4 +50,10 @@ MCP 不自动合并或删除文献。skill 中的补附件、元数据更新及�
 
 公开版本不包含个人学校入口、绝对个人路径、文库条目、PDF、截图、运行记录、配对令牌或授权缓存。配对配置在部署时本机生成；持续授权只在 Windows 凭据管理器中保存。
 
-本项目不是 Zotero 官方产品。Connector 来自 [zotero/zotero-connectors](https://github.com/zotero/zotero-connectors)，其版权和原有声明必须保留。skill 延续原有 [MIT License](LICENSE.txt)；配套 MCP 使用 [AGPL-3.0](mcp/LICENSE.txt)。分发桥接版 Connector 时须保留上游许可证及声明，参见 [第三方说明](NOTICE.md)。
+本项目不是 Zotero 官方产品。Connector 来自 [zotero/zotero-connectors](https://github.com/zotero/zotero-connectors)，其版权和原有声明必须保留。skill 延续原有 [MIT License](LICENSE.txt)；配套 MCP 使用 [AGPL-3.0](https://github.com/belvme/zotero-connector-mcp/blob/main/LICENSE.txt)。分发桥接版 Connector 时须保留上游许可证及声明，参见 [第三方说明](NOTICE.md)。
+
+## v2.1：插件补全文与只留一条
+
+正常下载未找到文件时，先检查 Connector 自动附件；用户手动插件保存后重新核验真实 PDF。用户要求只留一条时，可保留新导入的完整全文记录，归并独有笔记、附件、分类、标签和关系后，再将旧记录软删除。最终 key 可以变化，任务目标是每篇只留一条完整活动记录。
+
+MCP 已独立维护：[belvme/zotero-connector-mcp](https://github.com/belvme/zotero-connector-mcp)。原 v2.0.0 版本保留，当前版本使用独立组件。
