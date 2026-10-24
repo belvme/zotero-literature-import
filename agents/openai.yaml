@@ -1,4 +1,4 @@
 interface:
   display_name: "文献下载与 Zotero 导入"
-  short_description: "优先通过本机接口导入文献与全文，核对 PDF/HTML 附件并检查重复"
-  default_prompt: "使用 $zotero-literature-import 获取这些文献及全文，优先通过本机接口导入 Zotero，核对实际附件并报告重复和缺失项。"
+  short_description: "通过 Zotero Connector 保存论文、核验全文，为已有条目补齐 PDF/HTML 附件"
+  default_prompt: "使用 $zotero-literature-import 处理指定文献或分类，复用用户选择的浏览器和有效机构登录，通过 Connector 保存并核验全文，缺附件时补下载；保留原笔记和分类，报告实际完成与缺失项。"

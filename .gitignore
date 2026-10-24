@@ -10,3 +10,14 @@ outputs/
 work/
 .DS_Store
 Thumbs.db
+
+*.pyc
+.venv/
+.bridge-token
+mcp-private-config.json
+connector-build/
+connector-ready/
+connector-with-bridge/
+*.log
+*.pdf
+*.zip
